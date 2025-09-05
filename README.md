@@ -82,3 +82,18 @@ The project is configured with **Vite**. Here's how it's deployed on Vercel:
 
 Every commit pushed to the `main` branch automatically triggers a new deployment on Vercel.
  triggers a new deployment.
+
+ ---
+
+ ## Contributing
+
+This is my personal portfolio. If you'd like to suggest improvements, feel free to open an issue or send a pull request.
+
+---
+
+
+## License
+
+This portfolio is open-source under the **MIT License**.  
+Feel free to reuse or adapt as needed.
+
