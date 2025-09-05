@@ -93,8 +93,7 @@ This is my personal portfolio. If you'd like to suggest improvements, feel free 
 
 ## License
 
-This portfolio is open-source under the **MIT License**.  
-Feel free to reuse or adapt as needed.
+This portfolio is open-source. Feel free to reuse or adapt as needed.
 
 ---
 
