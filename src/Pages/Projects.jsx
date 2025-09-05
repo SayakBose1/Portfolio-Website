@@ -7,14 +7,14 @@ import {
   VStack,
   Button,
   HStack,
-  Link,
   Icon,
   Divider,
   Grid,
   GridItem,
   Image,
 } from "@chakra-ui/react";
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { motion } from "framer-motion"; // <-- Import motion
 
 const Projects = () => {
   const projects = [
@@ -56,8 +56,8 @@ const Projects = () => {
   return (
     <Layout>
       <Box
-        bg="#121212" // Dark background
-        color="#FFFFFF" // White text
+        bg="#121212"
+        color="#FFFFFF"
         py={{ base: "0", md: "10" }}
         px={5}
         borderRadius="15"
@@ -66,8 +66,7 @@ const Projects = () => {
         <VStack spacing={5} align="start" maxW="1000px" mx="auto">
           <Box>
             <HStack gap="3" alignItems="center" mb="5">
-              <Icon as={FaGithub} fontSize="30px" color="#BB86FC" />{" "}
-              {/* Accent color */}
+              <Icon as={FaGithub} fontSize="30px" color="#BB86FC" />
               <Heading as="h1" size="xl">
                 Projects
               </Heading>
@@ -76,72 +75,82 @@ const Projects = () => {
               Here are some of the projects I've worked on.
             </Text>
           </Box>
-          <Divider orientation="horizontal" borderColor="#333333" />{" "}
-          {/* Darker divider */}
+
+          <Divider orientation="horizontal" borderColor="#333333" />
+
           <Grid
             templateColumns="repeat(auto-fill, minmax(250px, 1fr))"
             gap={6}
             width="100%"
           >
             {projects.map((project, index) => (
-              <GridItem
+              <motion.div
                 key={index}
-                bg="#1E1E1E" // Dark gray background for each card
-                p={5}
-                borderRadius="md"
-                boxShadow="md"
-                display="flex"
-                flexDirection="column"
-                transition="all 0.3s ease-in-out"
-                _hover={{
-                  boxShadow: "0 0 12px 4px #BB86FC",
-                }}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                style={{ height: "100%" }} // <-- Make motion div full height
               >
-                <VStack
-                  align="start"
-                  spacing={4}
-                  height="100%"
-                  justifyContent="space-between"
+                <GridItem
+                  bg="#1E1E1E"
+                  p={5}
+                  borderRadius="md"
+                  boxShadow="md"
+                  display="flex"
+                  flexDirection="column"
+                  height="100%" // <-- Make GridItem stretch fully
+                  _hover={{
+                    boxShadow: "0 0 12px 4px #BB86FC",
+                  }}
                 >
-                  {/* Project Heading */}
-                  <Heading as="h3" size="md">
-                    {project.name}
-                  </Heading>
+                  <VStack
+                    align="start"
+                    spacing={4}
+                    height="100%" // <-- VStack takes full height
+                    justifyContent="space-between"
+                  >
+                    <Heading as="h3" size="md">
+                      {project.name}
+                    </Heading>
 
-                  {/* Project Image with fixed height */}
-                  <Image
-                    src={project.imageUrl}
-                    alt={project.name}
-                    borderRadius="md"
-                    objectFit="cover"
-                    width="100%"
-                    height="150px" // Set a fixed height for images
-                  />
-
-                  {/* Project Description */}
-                  <Text>{project.description}</Text>
-
-                  {/* Buttons aligned at the bottom */}
-                  <HStack spacing={4} mt="auto">
-                    <Button
-                      colorScheme="purple"
-                      as="a"
-                      href={project.liveLink}
-                      target="_blank"
+                    <motion.div
+                      whileHover={{ scale: 1.02 }}
+                      transition={{ duration: 0.3 }}
+                      style={{ width: "100%" }}
                     >
-                      Go Live
-                    </Button>
-                    <Button
-                      colorScheme="gray"
-                      as="a"
-                      href={project.githubLink}
-                      target="_blank"
-                    >
-                      GitHub
-                    </Button>
-                  </HStack>
-                </VStack>
-              </GridItem>
+                      <Image
+                        src={project.imageUrl}
+                        alt={project.name}
+                        borderRadius="md"
+                        objectFit="cover"
+                        width="100%"
+                        height="150px"
+                      />
+                    </motion.div>
+
+                    <Text>{project.description}</Text>
+
+                    <HStack spacing={4} mt="auto">
+                      <Button
+                        colorScheme="purple"
+                        as="a"
+                        href={project.liveLink}
+                        target="_blank"
+                      >
+                        Go Live
+                      </Button>
+                      <Button
+                        colorScheme="gray"
+                        as="a"
+                        href={project.githubLink}
+                        target="_blank"
+                      >
+                        GitHub
+                      </Button>
+                    </HStack>
+                  </VStack>
+                </GridItem>
+              </motion.div>
             ))}
           </Grid>
         </VStack>
