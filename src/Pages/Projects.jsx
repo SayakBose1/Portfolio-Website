@@ -28,12 +28,12 @@ const Projects = () => {
         "https://github.com/SayakBose1/MovieTicket_Booking_Application",
     },
     {
-      name: "Agritech",
-      imageUrl: "harvesting.webp",
+      name: "Green Pulse",
+      imageUrl: "Screenshot (59).png",
       description:
-        "AI-powered platform promoting sustainable farming through disease detection, crop recommendation, and smart analytics.",
-      liveLink: "",
-      githubLink: "",
+        "A modern eco-technology platform providing interactive maps showcasing green hotspots, a comprehensive news section for environmental updates, resource guides, and AI-powered services designed to help communities engage in eco-conscious actions.",
+      liveLink: "https://greencity-two.vercel.app/",
+      githubLink: "https://github.com/SayakBose1/greencity",
     },
     {
       name: "Blog App",
