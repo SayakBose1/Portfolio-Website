@@ -91,9 +91,28 @@ This is my personal portfolio. If you'd like to suggest improvements, feel free 
 
 ---
 
-
 ## License
 
 This portfolio is open-source under the **MIT License**.  
 Feel free to reuse or adapt as needed.
 
+---
+
+## Thank You
+
+Thank you for visiting! — **Sayak Kumar Bose**
+
+---
+
+###  Why This Works
+
+- It introduces *you* and the project.
+- Highlights core features and technology.
+- Gives clear local setup and deployment instructions.
+- Includes acknowledgment of automatic builds on Vercel.
+- Maintains clean organization and easy navigation.
+
+---
+
+Want me to customize any parts—like adding your project-specific screenshots, live links, or environment variable notes?
+::contentReference[oaicite:0]{index=0}
