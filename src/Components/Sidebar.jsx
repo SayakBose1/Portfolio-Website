@@ -10,18 +10,12 @@ import {
   HStack,
   Icon,
 } from "@chakra-ui/react";
-import {
-  FaGithub,
-  FaLinkedin,
-  FaEnvelope,
-  FaMapMarkerAlt,
-} from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { SiTelegram } from "react-icons/si";
-import { SiLeetcode } from "react-icons/si";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { GoDownload } from "react-icons/go";
+import { ReactTyped } from "react-typed"; // <-- use named import
 
 const Sidebar = () => {
   return (
@@ -31,27 +25,41 @@ const Sidebar = () => {
       display={"flex"}
       alignItems={"center"}
       justifyContent={"center"}
-      bg="gray.800" // Dark background
-      color="white" // Light text color
+      bg="gray.800"
+      color="white"
     >
-      {/* Developer Info Card */}
       <VStack spacing="4" alignItems="center" textAlign="center">
-        <Avatar size="2xl" name="" src="../sayak.jpg" />
+        {/* Avatar */}
+        <Avatar size="2xl" name="Sayak Kumar Bose" src="../sayak.jpg" />
+
+        {/* Name + Typed Text */}
         <Box>
           <Text fontSize="2xl" fontWeight="bold">
             Sayak Kumar Bose
           </Text>
           <Text fontSize="md" color="gray.400">
-            Full Stack Web Developer
+            <ReactTyped
+              strings={[
+                "Full Stack Web Developer",
+                "MERN Stack Enthusiast",
+                "Problem Solver",
+              ]}
+              typeSpeed={60}
+              backSpeed={40}
+              backDelay={1200}
+              loop
+            />
           </Text>
         </Box>
+
+        {/* Social Links */}
         <HStack spacing="3" mt="2">
           <Link href="https://github.com/SayakBose1" isExternal>
             <IconButton
               aria-label="Github"
               icon={<FaGithub />}
               size="lg"
-              fontSize={"x-large"}
+              fontSize="x-large"
               bg="gray.700"
               color={"gray.300"}
               _hover={{ bg: "gray.600" }}
@@ -66,7 +74,7 @@ const Sidebar = () => {
               aria-label="LinkedIn"
               icon={<FaLinkedin />}
               size="lg"
-              fontSize={"x-large"}
+              fontSize="x-large"
               bg="gray.700"
               color={"gray.300"}
               _hover={{ bg: "gray.600" }}
@@ -80,7 +88,7 @@ const Sidebar = () => {
               size="lg"
               bg="gray.700"
               color={"gray.300"}
-              fontSize={"x-large"}
+              fontSize="x-large"
               _hover={{ bg: "gray.600" }}
               isRound
             />
@@ -92,12 +100,13 @@ const Sidebar = () => {
               size="lg"
               bg="gray.700"
               color={"gray.300"}
-              fontSize={"x-large"}
+              fontSize="x-large"
               _hover={{ bg: "gray.600" }}
               isRound
             />
           </Link>
         </HStack>
+
         {/* Contact Info */}
         <Box pt="5">
           <HStack>
@@ -109,7 +118,8 @@ const Sidebar = () => {
             <Text fontSize={"15px"}>Kolkata, India</Text>
           </HStack>
         </Box>
-        {/* Download Resume Button */}
+
+        {/* Resume Download */}
         <Button
           as="a"
           href="/sayak_resume.pdf"
