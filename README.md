@@ -58,7 +58,7 @@ The layout includes a sidebar, mobile-friendly navigation, and clean modular com
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/YourUsername/Portfolio-Website.git
+git clone https://github.com/SayakBose1/Portfolio-Website.git
 cd Portfolio-Website
 
 # 2. Install dependencies
