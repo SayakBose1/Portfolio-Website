@@ -122,7 +122,7 @@ const Sidebar = () => {
         {/* Resume Download */}
         <Button
           as="a"
-          href="/sayak_resume.pdf"
+          href="/sayak-resume.pdf"
           download="Resume.pdf"
           mt="6"
           colorScheme="purple"
