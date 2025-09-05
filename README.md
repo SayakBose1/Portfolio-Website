@@ -72,7 +72,7 @@ Then open http://localhost:3000 in your browser to preview.
 
 ---
 
-## Deployment (Vercel)
+## Deployment
 
 The project is configured with **Vite**. Here's how it's deployed on Vercel:
 
