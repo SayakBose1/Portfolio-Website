@@ -36,20 +36,28 @@ const Projects = () => {
       githubLink: "https://github.com/SayakBose1/greencity",
     },
     {
-      name: "Blog App",
-      imageUrl: "/image copy.png",
+      name: "Quiz App",
+      imageUrl: "/Screenshot (60).png",
       description:
-        "A full stack Blog app created using reactJS and appwrite for backend, used tiny-mce for text-editor",
-      liveLink: "",
-      githubLink: "",
+        "A lightweight and responsive quiz app built with HTML, CSS, and JavaScript that lets users answer MCQs, track scores, and view rankings",
+      liveLink: "https://question-bank-pro.netlify.app/",
+      githubLink: "https://github.com/SayakBose1/Question-Bank",
     },
     {
-      name: "Code Care",
-      imageUrl: "/image.png",
+      name: "Candy Crush",
+      imageUrl: "/Screenshot (61).png",
       description:
-        "A code editor and executor created by React JS and Monaco code editor and API for execution",
-      liveLink: "",
-      githubLink: "",
+        "A colorful and interactive Candy Crush-style game built with HTML, CSS, and JavaScript, where you match candies within a fixed time and chase high scores.",
+      liveLink: "https://candy-crush-pro.netlify.app/",
+      githubLink: "https://github.com/SayakBose1/Candy-Crush-Game",
+    },
+    {
+      name: "Memory Game",
+      imageUrl: "/Screenshot (63).png",
+      description:
+        "A fun and engaging Memory Game built with HTML, CSS, and JavaScript, where you flip cards, match animal pairs, and challenge your memory skills.",
+      liveLink: "https://memory-game-pro.netlify.app/",
+      githubLink: "https://github.com/SayakBose1/Memory-Game",
     },
   ];
 
