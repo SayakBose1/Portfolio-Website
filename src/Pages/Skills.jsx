@@ -13,19 +13,15 @@ import {
   FaCode,
   FaCss3Alt,
   FaDatabase,
-  FaCertificate,
   FaReact,
   FaNodeJs,
-  FaCss3,
   FaJsSquare,
-  FaPython,
-  FaDesktop,
-  FaCogs,
 } from "react-icons/fa";
 import { DiJava } from "react-icons/di";
 import Layout from "../Components/Layout";
 import { RiNextjsFill } from "react-icons/ri";
 import { SiExpress, SiMongodb } from "react-icons/si";
+import { motion } from "framer-motion";
 
 const Skills = () => {
   const technicalSkills = [
@@ -39,14 +35,12 @@ const Skills = () => {
     { name: "Next.js", icon: RiNextjsFill },
     { name: "Java", icon: DiJava },
     { name: "SQL", icon: FaDatabase },
-    // Add more technical skills here
   ];
 
   const csFundamentals = [
     { name: "DBMS", icon: FaDatabase },
     { name: "OOPS", icon: FaCode },
-    { name: "Operating System", icon: FaDesktop },
-    // Add more CS fundamentals here
+    { name: "Operating System", icon: FaCode },
   ];
 
   const certifications = [
@@ -65,12 +59,25 @@ const Skills = () => {
       issuer: "ARDENT COMPUTECH PVT. LTD.",
       url: "/training.pdf",
     },
-
-    // Add more certifications here
   ];
 
   const handleOpenPDF = (url) => {
     window.open(url, "_blank");
+  };
+
+  // Motion variants for staggered animation
+  const container = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
   };
 
   return (
@@ -78,27 +85,37 @@ const Skills = () => {
       <Box
         py={{ base: "0", md: "10" }}
         px={5}
-        bg="#121212" // Dark Background
-        color="#FFFFFF" // White Text
+        bg="#121212"
+        color="#FFFFFF"
         borderRadius="15"
         m={4}
       >
+        {/* Technical Skills */}
         <VStack spacing={5} align="start" maxW="1000px" mx="auto">
           <Heading as="h1" size="xl" mb={5}>
             Technical Skills
           </Heading>
-          <Grid
-            templateColumns={{
-              base: "repeat(2, 1fr)",
-              md: "repeat(3, 1fr)",
-              lg: "repeat(5, 1fr)",
-            }}
-            gap={6}
+          <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
           >
-            {technicalSkills.map((skill, index) => (
-              <SkillCard key={index} name={skill.name} icon={skill.icon} />
-            ))}
-          </Grid>
+            <Grid
+              templateColumns={{
+                base: "repeat(2, 1fr)",
+                md: "repeat(3, 1fr)",
+                lg: "repeat(5, 1fr)",
+              }}
+              gap={6}
+            >
+              {technicalSkills.map((skill, index) => (
+                <motion.div key={index} variants={item}>
+                  <SkillCard name={skill.name} icon={skill.icon} />
+                </motion.div>
+              ))}
+            </Grid>
+          </motion.div>
         </VStack>
 
         {/* CS Fundamentals */}
@@ -106,18 +123,27 @@ const Skills = () => {
           <Heading as="h1" size="xl" mb={5}>
             CS Fundamentals
           </Heading>
-          <Grid
-            templateColumns={{
-              base: "repeat(2, 1fr)",
-              md: "repeat(3, 1fr)",
-              lg: "repeat(4, 1fr)",
-            }}
-            gap={6}
+          <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
           >
-            {csFundamentals.map((skill, index) => (
-              <SkillCard key={index} name={skill.name} icon={skill.icon} />
-            ))}
-          </Grid>
+            <Grid
+              templateColumns={{
+                base: "repeat(2, 1fr)",
+                md: "repeat(3, 1fr)",
+                lg: "repeat(4, 1fr)",
+              }}
+              gap={6}
+            >
+              {csFundamentals.map((skill, index) => (
+                <motion.div key={index} variants={item}>
+                  <SkillCard name={skill.name} icon={skill.icon} />
+                </motion.div>
+              ))}
+            </Grid>
+          </motion.div>
         </VStack>
 
         {/* Certifications */}
@@ -149,47 +175,44 @@ const Skills = () => {
 };
 
 const SkillCard = ({ name, icon }) => (
-  <HStack
-    bg="#1E1E1E" // Dark Gray Background
-    p={4}
-    borderRadius="md"
-    boxShadow="md"
-    justifyContent="center"
-    alignItems="center"
-    spacing={3}
-    transition="all 0.3s ease-in-out"
-    _hover={{
-      boxShadow: "0 0 6px 3px #BB86FC",
-    }}
+  <motion.div
+    whileHover={{ scale: 1.05 }}
+    transition={{ type: "spring", stiffness: 300 }}
   >
-    <Icon as={icon} w={6} h={6} color="#BB86FC" /> {/* Accent Color */}
-    <Text fontSize="lg" fontWeight="600">
-      {name}
-    </Text>
-  </HStack>
+    <HStack
+      bg="#1E1E1E"
+      p={4}
+      borderRadius="md"
+      boxShadow="md"
+      justifyContent="center"
+      alignItems="center"
+      spacing={3}
+      transition="all 0.3s ease-in-out"
+      _hover={{ boxShadow: "0 0 6px 3px #BB86FC" }}
+    >
+      <Icon as={icon} w={6} h={6} color="#BB86FC" />
+      <Text fontSize="lg" fontWeight="600">
+        {name}
+      </Text>
+    </HStack>
+  </motion.div>
 );
 
 const CertificationCard = ({ name, issuer, onClick }) => (
   <Box
-    bg="#1E1E1E" // Dark Gray Background
+    bg="#1E1E1E"
     p={4}
     borderRadius="md"
     boxShadow="md"
     onClick={onClick}
     cursor="pointer"
     transition="all 0.3s ease-in-out"
-    _hover={{
-      boxShadow: "0 0 6px 3px #BB86FC",
-    }}
+    _hover={{ boxShadow: "0 0 6px 3px #BB86FC" }}
   >
     <Heading as="h4" size="md" mb={2} color="#BB86FC">
-      {" "}
-      {/* Accent Color */}
       {name}
     </Heading>
     <Text fontSize="sm" color="#B0BEC5">
-      {" "}
-      {/* Light Gray Text */}
       Issued by: {issuer}
     </Text>
   </Box>
