@@ -2,7 +2,7 @@
 
 Welcome to my personal React portfolio! This site showcases my skills, projects, and contact details in a modern, responsive design built with React, Chakra UI, Framer Motion, and Vercel.
 
-🌐 **Live Demo**: [portfolio-website-pi-sooty-76.vercel.app](https://portfolio-website-pi-sooty-76.vercel.app/)
+🌐 **Live Demo**: [portfolio-website-pi-sooty-76.vercel.app](https://portfolio-website-theta-wheat.vercel.app/)
 
 ---
 
