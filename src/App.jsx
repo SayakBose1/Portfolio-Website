@@ -1,42 +1,69 @@
+// import { Box } from '@chakra-ui/react'
+// import './App.css'
+// import Layout from './Components/Layout'
+// import About from './Pages/About.jsx'
+// import Skills from './Pages/Skills.jsx'
+// import Projects from './Pages/Projects.jsx'
+// import Contact from './Pages/Contact.jsx'
+// import { RouterProvider,createBrowserRouter } from 'react-router-dom'
 
-import { Box } from '@chakra-ui/react'
-import './App.css'
-import Layout from './Components/Layout'
-import About from './Pages/About.jsx'
-import Skills from './Pages/Skills.jsx'
-import Projects from './Pages/Projects.jsx'
-import Contact from './Pages/Contact.jsx'
-import { RouterProvider,createBrowserRouter } from 'react-router-dom'
+// const router= createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <About/>,
+//   },
+//   {
+//     path: "/skills",
+//     element: <Skills/>,
+//   },
+//   {
+//     path: "/projects",
+//     element: <Projects/>,
+//   },
+//   {
+//     path: "/contact",
+//     element: <Contact/>,
+//   },
+// ])
 
+// function App() {
 
+//   return (
+//     <>
+//     <RouterProvider router={router}/>
+//     </>
+//   )
+// }
 
-const router= createBrowserRouter([
+// export default App
+import "./App.css";
+import About from "./Pages/About.jsx";
+import Skills from "./Pages/Skills.jsx";
+import Projects from "./Pages/Projects.jsx";
+import Contact from "./Pages/Contact.jsx";
+import { RouterProvider, createHashRouter } from "react-router-dom";
+
+const router = createHashRouter([
   {
     path: "/",
-    element: <About/>,
+    element: <About />,
   },
   {
     path: "/skills",
-    element: <Skills/>,
+    element: <Skills />,
   },
   {
     path: "/projects",
-    element: <Projects/>,
+    element: <Projects />,
   },
   {
     path: "/contact",
-    element: <Contact/>,
+    element: <Contact />,
   },
-])
+]);
 
 function App() {
- 
-
-  return (
-    <>
-    <RouterProvider router={router}/> 
-    </>
-  )
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;
