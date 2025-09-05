@@ -9,27 +9,33 @@ import {
   Icon,
 } from "@chakra-ui/react";
 import {
+  FaHtml5,
   FaCode,
+  FaCss3Alt,
   FaDatabase,
   FaCertificate,
   FaReact,
+  FaNodeJs,
   FaCss3,
   FaJsSquare,
   FaPython,
+  FaDesktop,
+  FaCogs,
 } from "react-icons/fa";
 import { DiJava } from "react-icons/di";
 import Layout from "../Components/Layout";
 import { RiNextjsFill } from "react-icons/ri";
+import { SiExpress, SiMongodb } from "react-icons/si";
 
 const Skills = () => {
   const technicalSkills = [
-    { name: "HTML", icon: FaCode },
-    { name: "CSS", icon: FaCss3 },
+    { name: "HTML", icon: FaHtml5 },
+    { name: "CSS", icon: FaCss3Alt },
     { name: "JavaScript", icon: FaJsSquare },
     { name: "React", icon: FaReact },
-    { name: "NodeJs", icon: FaCss3 },
-    { name: "Express", icon: FaCode },
-    { name: "MongoDB", icon: FaDatabase },
+    { name: "NodeJs", icon: FaNodeJs },
+    { name: "Express", icon: SiExpress },
+    { name: "MongoDB", icon: SiMongodb },
     { name: "Next.js", icon: RiNextjsFill },
     { name: "Java", icon: DiJava },
     { name: "SQL", icon: FaDatabase },
@@ -39,7 +45,7 @@ const Skills = () => {
   const csFundamentals = [
     { name: "DBMS", icon: FaDatabase },
     { name: "OOPS", icon: FaCode },
-    { name: "Operating System", icon: FaCode },
+    { name: "Operating System", icon: FaDesktop },
     // Add more CS fundamentals here
   ];
 
