@@ -36,6 +36,14 @@ const Projects = () => {
       githubLink: "https://github.com/SayakBose1/greencity",
     },
     {
+      name: "Tourizio",
+      imageUrl: "/Screenshot (95).png",
+      description:
+        "Tourizio is a sleek tourism web app that helps users discover, explore, and plan trips with curated destinations and travel resources.",
+      liveLink: "https://tourizio-five.vercel.app/",
+      githubLink: "https://github.com/SayakBose1/tourizio",
+    },
+    {
       name: "Quiz App",
       imageUrl: "/Screenshot (60).png",
       description:
