@@ -31,7 +31,7 @@ const Projects = () => {
       name: "Green Pulse",
       imageUrl: "Screenshot (59).png",
       description:
-        "A modern eco-technology platform providing interactive maps showcasing green hotspots, a comprehensive news section for environmental updates, resource guides, and AI-powered services designed to help communities engage in eco-conscious actions.",
+        "A modern eco-tech platform with interactive green maps, environmental news, resource guides, and AI tools to empower eco-conscious communities.",
       liveLink: "https://greencity-two.vercel.app/",
       githubLink: "https://github.com/SayakBose1/greencity",
     },
@@ -44,20 +44,20 @@ const Projects = () => {
       githubLink: "https://github.com/SayakBose1/tourizio",
     },
     {
+      name: "QuickeyIt",
+      imageUrl: "/Screenshot (110).png",
+      description:
+        "QuickeyIt is an online grocery app for easy browsing, ordering, and doorstep delivery of daily essentials.",
+      liveLink: "https://quickeyit.vercel.app/",
+      githubLink: "https://github.com/SayakBose1/QuickeyIt",
+    },
+    {
       name: "Quiz App",
       imageUrl: "/Screenshot (60).png",
       description:
         "A lightweight and responsive quiz app built with HTML, CSS, and JavaScript that lets users answer MCQs, track scores, and view rankings",
       liveLink: "https://question-bank-pro.netlify.app/",
       githubLink: "https://github.com/SayakBose1/Question-Bank",
-    },
-    {
-      name: "Candy Crush",
-      imageUrl: "/Screenshot (61).png",
-      description:
-        "A colorful and interactive Candy Crush-style game built with HTML, CSS, and JavaScript, where you match candies within a fixed time and chase high scores.",
-      liveLink: "https://candy-crush-pro.netlify.app/",
-      githubLink: "https://github.com/SayakBose1/Candy-Crush-Game",
     },
     {
       name: "Memory Game",
