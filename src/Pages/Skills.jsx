@@ -45,9 +45,9 @@ const Skills = () => {
 
   const certifications = [
     {
-      name: "Angular Web Developer Certificate",
+      name: "Software Developer Internship Certificate",
       issuer: "Infosys Springboard",
-      url: "/angular.pdf",
+      url: "/angular_course.pdf",
     },
     {
       name: "Web Developmemt Certificate",
