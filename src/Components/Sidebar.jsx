@@ -30,7 +30,7 @@ const Sidebar = () => {
     >
       <VStack spacing="4" alignItems="center" textAlign="center">
         {/* Avatar */}
-        <Avatar size="2xl" name="Sayak Kumar Bose" src="../sayak.jpg" />
+        <Avatar size="2xl" name="Sayak Kumar Bose" src="../sayak2.jpg" />
 
         {/* Name + Typed Text */}
         <Box>
@@ -122,7 +122,7 @@ const Sidebar = () => {
         {/* Resume Download */}
         <Button
           as="a"
-          href="/sayak-resume.pdf"
+          href="/sayak_resume.pdf"
           download="Resume.pdf"
           mt="6"
           colorScheme="purple"
